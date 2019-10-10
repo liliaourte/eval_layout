@@ -1,22 +1,141 @@
 <!DOCTYPE html>
 <html lang="fr">
-	<style>
+<style>
 
-	</style>
-	<head>
-		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>Eval Layout</title>
-		<link rel="stylesheet" href="css/style.css">
-	</head>
-	<body>
-		<h1 class="txtcenter">Evaluation  Layout</h1>
-		<h2 class="desktopG txtcenter">Vue Desktop > 1370px</h2>
-		<h2 class="desktop txtcenter">Vue Desktop</h2>
-		<h2 class="tablette txtcenter">Vue Tablette à 768px à 970px</h2>
-		<h2 class="telephone txtcenter">Vue Téléphone à 320px</h2>
+	* {
+		margin: 0;
+		padding: 0;
+	}
 
+	.inner {
+		width:100%;
+	}
 
+	h2 {
+		display: none;
+		padding: 10px;
+	}
 
-	</body>
+	h3{
+		text-align: center;
+	}
+
+	.txtcenter {
+		text-align: center;
+	}
+
+	.block {
+		display: inline-block;
+		width: 100%
+	}
+
+	img {
+		width: 100%;
+	}
+
+	@media screen and (min-width: 320px){
+		.inner {
+			width: 100%;
+			margin: 0 auto;
+		}
+
+		.telephone {
+			display: block;
+		}
+
+		.block {
+			margin: 0 auto;
+		}
+	}
+
+	@media screen and (min-width: 768px){
+		.inner {
+			width: 100%;
+		}
+
+		.tablette {
+			display: block;
+		}
+		.telephone {
+			display: none;
+		}
+
+		.block {
+			width: 48%;
+		}
+	}
+
+	@media screen and (min-width: 970px){
+		.inner {
+			width: 970px;
+		}
+
+        .block {
+            width: 480px;
+        }
+
+		.tablette, .telephone {
+			display: none;
+		}
+
+		.desktop {
+			display: block;
+		}
+	}
+
+	@media screen and (min-width: 1320px){
+		.inner {
+			width: 1320px;
+		}
+
+		.block {
+			width: 325px;
+		}
+
+		.tablette, .telephone, .desktop {
+			display: none;
+		}
+
+		.desktopG {
+			display: block;
+		}
+	}
+</style>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Eval Layout</title>
+</head>
+<body>
+	<h1 class="txtcenter">Evaluation  Layout</h1>
+
+	<h2 class="desktopG txtcenter">Vue Desktop > 1370px</h2>
+	<h2 class="desktop txtcenter">Vue Desktop</h2>
+	<h2 class="tablette txtcenter">Vue Tablette à 768px à 970px</h2>
+	<h2 class="telephone txtcenter">Vue Téléphone à 320px</h2>
+
+	<div class="inner">
+
+		<div class="block">
+			<img src="img/mer.jpg" alt="mer">
+			<h3>La mer</h3>
+		</div>
+
+		<div class="block">
+			<img src="img/lac.jpg" alt="lac">
+			<h3>Le lac</h3>
+		</div>
+
+		<div class="block">
+			<img src="img/montagne.jpg" alt="montagne">
+			<h3>La montagne</h3>
+		</div>
+
+		<div class="block">
+			<img src="img/foret.jpg" alt="foret">
+			<h3>La forêt</h3>
+		</div>
+
+	</div>
+</body>
 </html>
